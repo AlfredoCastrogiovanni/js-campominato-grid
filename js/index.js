@@ -5,13 +5,13 @@ const playButton = document.getElementById("playButton");
 playButton.addEventListener("click", function() {
     const squareNumber = parseInt(document.getElementById("difficulty").value);
     wrapper.innerHTML = "";
-    createSquare(squareNumber);
+    createSquare(wrapper,squareNumber);
 });
 
 // ==================== FUNCTIONS ====================
 
 // return a new square
-function createSquare(times) {
+function createSquare(wrapper,times) {
     for(let i=1; i <= times; i++) {
         const newSquare = document.createElement("div");
         newSquare.classList.add("square");
